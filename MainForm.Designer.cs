@@ -37,6 +37,7 @@
             gridSizeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             delayNumericUpDown = new System.Windows.Forms.NumericUpDown();
             delayLabel = new System.Windows.Forms.Label();
+            lineCountLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)gridSizeNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)delayNumericUpDown).BeginInit();
             SuspendLayout();
@@ -53,16 +54,16 @@
             startGreedyAlgorithmButton.TabIndex = 0;
             startGreedyAlgorithmButton.Text = "Start Greedy";
             startGreedyAlgorithmButton.UseVisualStyleBackColor = false;
-            startGreedyAlgorithmButton.Click += startGreedyAlgorithmButton_Click;
+            startGreedyAlgorithmButton.Click += StartGreedyAlgorithmButton_Click;
             // 
             // drawingPanel
             // 
-            drawingPanel.Location = new System.Drawing.Point(13, 101);
+            drawingPanel.Location = new System.Drawing.Point(13, 151);
             drawingPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             drawingPanel.Name = "drawingPanel";
-            drawingPanel.Size = new System.Drawing.Size(1049, 788);
+            drawingPanel.Size = new System.Drawing.Size(1049, 738);
             drawingPanel.TabIndex = 1;
-            drawingPanel.Paint += drawingPanel_Paint;
+            drawingPanel.Paint += DrawingPanel_Paint;
             // 
             // numOfPointsLabel
             // 
@@ -87,7 +88,7 @@
             startDynamicProgrammingAlgorithmButton.TabIndex = 3;
             startDynamicProgrammingAlgorithmButton.Text = "Start Dynamic Programming";
             startDynamicProgrammingAlgorithmButton.UseVisualStyleBackColor = false;
-            startDynamicProgrammingAlgorithmButton.Click += startDynamicProgrammingAlgorithmButton_Click;
+            startDynamicProgrammingAlgorithmButton.Click += StartDynamicProgrammingAlgorithmButton_Click;
             // 
             // _drawingTimer
             // 
@@ -102,7 +103,7 @@
             gridSizeNumericUpDown.Size = new System.Drawing.Size(298, 35);
             gridSizeNumericUpDown.TabIndex = 4;
             gridSizeNumericUpDown.Value = new decimal(new int[] { 4, 0, 0, 0 });
-            gridSizeNumericUpDown.ValueChanged += gridSizeNumericUpDown_ValueChanged;
+            gridSizeNumericUpDown.ValueChanged += GridSizeNumericUpDown_ValueChanged;
             // 
             // delayNumericUpDown
             // 
@@ -114,7 +115,7 @@
             delayNumericUpDown.Size = new System.Drawing.Size(298, 35);
             delayNumericUpDown.TabIndex = 6;
             delayNumericUpDown.Value = new decimal(new int[] { 150, 0, 0, 0 });
-            delayNumericUpDown.ValueChanged += delayNumericUpDown_ValueChanged;
+            delayNumericUpDown.ValueChanged += DelayNumericUpDown_ValueChanged;
             // 
             // delayLabel
             // 
@@ -127,12 +128,24 @@
             delayLabel.TabIndex = 5;
             delayLabel.Text = "Delay (ms):";
             // 
+            // lineCountLabel
+            // 
+            lineCountLabel.Font = new System.Drawing.Font("Segoe UI", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            lineCountLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            lineCountLabel.Location = new System.Drawing.Point(13, 103);
+            lineCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lineCountLabel.Name = "lineCountLabel";
+            lineCountLabel.Size = new System.Drawing.Size(1055, 43);
+            lineCountLabel.TabIndex = 7;
+            lineCountLabel.Text = "Line Count: 0";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(33, 33, 33);
             ClientSize = new System.Drawing.Size(1080, 909);
+            Controls.Add(lineCountLabel);
             Controls.Add(delayNumericUpDown);
             Controls.Add(delayLabel);
             Controls.Add(gridSizeNumericUpDown);
@@ -162,6 +175,7 @@
         private System.Windows.Forms.NumericUpDown gridSizeNumericUpDown;
         private System.Windows.Forms.NumericUpDown delayNumericUpDown;
         private System.Windows.Forms.Label delayLabel;
+        private System.Windows.Forms.Label lineCountLabel;
     }
 }
 
