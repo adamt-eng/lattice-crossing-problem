@@ -1,4 +1,4 @@
-﻿namespace Task6_Algorithms
+﻿namespace Task_6_Algorithms_Project
 {
     partial class MainForm
     {

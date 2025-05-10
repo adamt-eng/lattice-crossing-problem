@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Task6_Algorithms;
+namespace Task_6_Algorithms_Project;
 
 internal partial class MainForm : Form
 {
