@@ -8,6 +8,10 @@ You may cross the same point more than once, but you cannot redraw any portion o
 The original problem requires covering all points of an n×n lattice (n > 2) using 2n − 2 straight lines without lifting the pen.
 However, empirical testing and geometric analysis show that this constraint is too restrictive and often impossible to satisfy for arbitrary grid sizes. To ensure feasibility, we updated the constraint to 2n−1 lines.
 
+- Test Case 1: n=4 using DP
+  
+   ![(n=4 using DP)](test-case-1.png)
+
 ## Dynamic Programming Solution
 
 ### Approach
